@@ -33,3 +33,18 @@ docker run -it -v test_volume:/test --name ubuntu_container ubuntu:22.04
 
 # Make a volume read-only
 docker run -it -v test_name_volume:/test:ro ubuntu:22.04
+```
+Note: Even if you skip the volume create command, Docker will automatically create the volume if it does not exist.
+Defining Volumes in Dockerfile
+FROM ubuntu:22.04
+VOLUME /test_name_volume
+Defining Volumes in Docker Compose File
+services:
+  app:
+    image: ubuntu:22.04
+    volumes:
+      - test_name_volume:/data
+
+volumes:
+  test_name_volume:
+
