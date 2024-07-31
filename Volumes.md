@@ -42,5 +42,34 @@ docker run -it -v test_name_volume:/test:ro ubuntu:22.04
 FROM ubuntu:22.04
 VOLUME /test_name_volume
 ```
+## Defining Volumes in Docker Compose File
+```yaml
+services:
+  app:
+    image: ubuntu:22.04
+    volumes:
+      - test_name_volume:/data
+
+volumes:
+  test_name_volume:
+```
+## If You Want to Use an Existing Volume
+- To tell Compose that a volume is already created and just pick that volume to mount, add this option to the volume section:
+```yaml
+volumes:
+  test_name_volume:
+    external: true
+```
+### Inspecting and Removing Volumes
+```bash
+# Inspect a volume
+docker volume ls
+docker volume inspect test_name_volume
+
+# Remove a volume
+docker volume rm test_name_volume
+```
+
+
 
 
