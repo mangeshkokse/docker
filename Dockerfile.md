@@ -47,7 +47,7 @@ Pre-Requisite: Docker should be installed on your system
        
            `CMD ["executable","param1","param2",...]`
 	
-  For example,
+      For example,
            `CMD ["npm", "start"]`
   
 - **ENTRYPOINT** : The ENTRYPOINT Dockerfile instruction sets the process that’s executed when your container starts.
