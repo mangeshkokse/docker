@@ -73,7 +73,7 @@ docker volume rm test_name_volume
 
 Bind Mount has been available since the early stage of Docker. Bind mounts will mount a file or folder from your host machine to the container file system. When we start a container, that file or folder does not necessarily exist in the container. If it doesn’t exist, it will be created on demand. Now, when we change something in that folder (that is mounted), it will be reflected inside the container and vice versa.
 
-**Note**: Bind mounts might introduce some security risks that you need to handle because if we change something from the container, it will be reflected in the host file system as well. We usually use mounts during development. During development, we mount our code folder into the container. Then, when we make changes to the code, it will reflect in the container in real-time without us needing to create a new image.
+> **Note**: Bind mounts might introduce some security risks that you need to handle because if we change something from the container, it will be reflected in the host file system as well. We usually use mounts during development. During development, we mount our code folder into the container. Then, when we make changes to the code, it will reflect in the container in real-time without us needing to create a new image.
 
 ### Linking Docker Container with Persistent Volume
 
