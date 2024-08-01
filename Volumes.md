@@ -82,8 +82,7 @@ This is the command to link a new Docker container with the persistent volume th
 ```sh
 $ docker run -v /data/mysql:/var/lib/mysql mysql
 ```
-
-**Note**:-v is the old way of doing things. The new methodology is to use the --mount command
+> **Note**:-v is the old way of doing things. The new methodology is to use the --mount command
 ```sh
 $ docker run --mount type=bind,source=/data/mysql,target=/var/lib/mysql mysql
 ```
