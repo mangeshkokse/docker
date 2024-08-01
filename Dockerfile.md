@@ -1,5 +1,7 @@
 # let’s start building Dockerfile from scratch 
 
+Pre-Requisite: Docker should be installed on your system
+
 - **FROM**: The FROM instruction specifies the base image that the container will be built on top of. This instruction is typically the first one in a Dockerfile and is used to set the base image for the container. 
    
    `FROM <image>`
