@@ -87,8 +87,25 @@ $ docker run -v /data/mysql:/var/lib/mysql mysql
 ```sh
 $ docker run --mount type=bind,source=/data/mysql,target=/var/lib/mysql mysql
 ```
+## Tmpfs Mounts
 
+Tmpfs mount is a special type of mount that allows you to create a temporary file system in memory. A tmpfs mount is temporary and exists only as long as the container is running. Once the container is stopped or restarted, the data in the tmpfs mount is lost. Therefore, tmpfs mounts are not suitable for storing data that needs to persist across container restarts.
 
+### When to use Tmpfs Mounts:
+- **As Temporary Scratch Space**: If your application requires temporary storage for processing data, such as caching or intermediate calculations.
+
+### How to use Tmpfs Mount
+```sh
+$ docker run --tmpfs /path/in/container image:tag
+```
+### Tmpfs Mount in Docker Compose
+```yaml
+services:
+  myservice:
+    image: image:tag
+    tmpfs:
+      - /path/in/container
+```
 
 
 
