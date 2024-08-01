@@ -33,7 +33,7 @@ WORKDIR /usr/share/nginx/html
 COPY --from=builder /usr/src/app/dist/my-angular-app/ .
 ```
 
-### Note: Normally, Stage 1 initializes the first build, and then Stage 2 initializes a secondary build stage like that.
+> **Note**: Normally, Stage 1 initializes the first build, and then Stage 2 initializes a secondary build stage like that.
 
 
 ### Key Points:
