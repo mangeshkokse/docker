@@ -61,11 +61,11 @@ Pre-Requisite: Docker should be installed on your system
 
 - **ENV**: ENV instruction to set environment variables inside the image which will be available during build time as well as in a running container. For example, to set the NODE_ENV environment variable to production, you would use the following command:
 
-    `ENV NODE_ENV production`
+           `ENV NODE_ENV production`
 
 - **EXPOSE**: EXPOSE command to tell Docker which ports the container will listen on at runtime. For example, if your application listens on port 9000, you would use the following command:
     
-    `EXPOSE 9000`
+           `EXPOSE 9000`
 
 - Sample Docker File would look like below:
 
