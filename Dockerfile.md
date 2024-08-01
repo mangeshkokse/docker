@@ -16,7 +16,7 @@ Pre-Requisite: Docker should be installed on your system
 
              `WORKDIR <directory>`
 
-  For example,
+      For example,
              `WORKDIR /app`
 
   This instruction tells Docker to set the working directory of the container to /app. Any subsequent commands in the Dockerfile, such as COPY, RUN, or CMD, will be executed in this directory.
