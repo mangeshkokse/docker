@@ -6,7 +6,7 @@ Pre-Requisite: Docker should be installed on your system
    
               `FROM <image>`
 
-  For example, 
+      For example, 
               `FROM node:14-alpine3.16`
    
   This instruction tells Docker to use the node:14-alpine3.16 image as the base image for the container. To use a specific version or tag of an image you can use:<version> or:<tag> syntax.
@@ -54,7 +54,7 @@ Pre-Requisite: Docker should be installed on your system
                    Entrypoint use for specifc actions in container.
                    ENTRYPOINT is like given action that the robot must follow no matter what.
 
-  For example,
+      For example,
            `ENTRYPOINT ["python", "app.py"]`
 	
   Apart from all the instructions mentioned, there are some more instructions like ENV, and EXPOSE which are also used in creating Dockerfile. Below is a detailed description of the same:
