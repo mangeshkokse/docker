@@ -71,4 +71,16 @@ Docker images are used to create containers. They are read-only templates that d
 
 Images can be pulled from repositories like Docker Hub or built from `Dockerfile` definitions.
 
+# Q. What is Docker Hub?
+
+Docker Hub is a cloud-based registry service where Docker users can store, share, and access Docker images. It provides:
+
+- **Public and Private Repositories**: Users can host their own images or access pre-built images from the public repositories.
+- **Automated Builds**: Automatically build images from source code repositories (e.g., GitHub).
+- **Image Distribution**: Allows users to pull and push images for easy distribution across different environments.
+
+Docker Hub is a central resource for developers to find and share containerized applications and services.
+On `AWS` we get `ECR`.
+
+
 
