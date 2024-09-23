@@ -48,3 +48,27 @@ Each tool has its unique features and integrations, making them suitable for dif
   - **Container**: Ideal for microservices, cloud-native apps, and fast deployment cycles.
   - **VM**: Suitable for running multiple, isolated operating systems and legacy applications that require full OS environments.
 
+
+# Q. What is Docker Engine?
+
+Docker Engine is the core component of Docker, responsible for building, running, and managing containers. It acts as the client-server architecture that enables Docker’s functionality:
+
+- **Docker Daemon**: The server-side process that manages containers and interacts with the OS to allocate resources. It listens for Docker API requests.
+- **Docker CLI**: The command-line interface that users interact with to issue commands (e.g., `docker run`, `docker build`).
+- **REST API**: Provides programmatic control over Docker, allowing integration with other tools and services.
+
+Docker Engine manages the lifecycle of containers, builds images, and ensures smooth orchestration between the components, making containerized application deployment possible.
+
+# Q. What is a Docker Image?
+
+A Docker image is a lightweight, standalone, and executable package that includes everything needed to run a piece of software, such as:
+
+- **Application code**
+- **Libraries and dependencies**
+- **Configuration files and environment variables**
+
+Docker images are used to create containers. They are read-only templates that define the environment in which the application will run. Once the image is built, it can be shared, versioned, and deployed across different environments consistently.
+
+Images can be pulled from repositories like Docker Hub or built from `Dockerfile` definitions.
+
+
