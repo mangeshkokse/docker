@@ -129,16 +129,20 @@ CMD ["nginx", "-g", "daemon off;"]
 1 -`FROM nginx:latest`
 - **Purpose:** This line tells Docker to use the official nginx image from Docker Hub as the base image for your Dockerfile. The nginx:latest tag means that it will pull the most recent stable version of NGINX.
 - **Reason:** NGINX is a well-optimized, lightweight web server, so using its official image simplifies setting up a web server.
+  
 2 -`COPY ./nginx.conf /etc/nginx/nginx.conf`
 - **Purpose:** Copies a custom NGINX configuration file from your local directory `(./nginx.conf)` to the correct path inside the container `(/etc/nginx/nginx.conf)`.
 - **Reason:** This allows you to customize the NGINX behavior (e.g., setting up reverse proxies, SSL, etc.) by providing your own NGINX configuration. Without this step, NGINX would use its default configuration.
+  
 3 -`COPY ./html /usr/share/nginx/html`
 - **Purpose:** Copies your static website files `(HTML, CSS, JS)` into the default directory that NGINX serves content from inside the container `(/usr/share/nginx/html).`
 - **Reason:** By copying static files here, you’re serving a website or web application. The directory `/usr/share/nginx/html` is the default document root for NGINX.
-4.`EXPOSE 80`
+  
+4 -`EXPOSE 80`
 - **Purpose:** This informs Docker that the container listens on port 80 for HTTP traffic. This does not publish the port on the host machine automatically but is a way of documenting which port the service uses.
-- **Reason:** Since NGINX listens on port 80 by default (for HTTP), exposing this port allows the container to serve web traffic when run.   
-5.`CMD ["nginx", "-g", "daemon off;"]`
+- **Reason:** Since NGINX listens on port 80 by default (for HTTP), exposing this port allows the container to serve web traffic when run.
+  
+5 -`CMD ["nginx", "-g", "daemon off;"]`
 - **Purpose:** This command tells Docker to start the NGINX process inside the container. The `-g "daemon off;"` flag ensures that NGINX runs in the foreground, which is important for Docker containers to remain running.
 - **Reason:** In a Docker container, the main process should not run in the background, as the container will stop. Running NGINX in the foreground keeps the container alive.
 
