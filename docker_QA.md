@@ -429,8 +429,6 @@ In practice, **use `ENTRYPOINT`** when you want your container to behave like an
 
 By combining these techniques, you can significantly reduce the size of Docker images, making them faster to build, pull, and deploy.
 
-# Advanced: What is a Layer in Docker?
-
 # Q. What is a Layer in Docker?
 
 In Docker, a **layer** is a single instruction in a Dockerfile that creates a new filesystem snapshot. Each instruction in a Dockerfile (like `RUN`, `COPY`, `ADD`) creates a layer. Docker images are built in layers, and each layer represents a change or modification made on top of the previous one.
