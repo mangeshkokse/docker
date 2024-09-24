@@ -124,7 +124,8 @@ EXPOSE 80
 # Step 5: Start NGINX (this is handled by the base image)
 CMD ["nginx", "-g", "daemon off;"]
 ```
-1 -`Explanation of Each Step` 
+**Explanation of Each Step**
+1 -`FROM nginx:latest`
 - **Purpose:** This line tells Docker to use the official nginx image from Docker Hub as the base image for your Dockerfile. The nginx:latest tag means that it will pull the most recent stable version of NGINX.
 - **Reason:** NGINX is a well-optimized, lightweight web server, so using its official image simplifies setting up a web server.
 2 -`COPY ./nginx.conf /etc/nginx/nginx.conf`
