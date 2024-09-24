@@ -82,5 +82,28 @@ Docker Hub is a cloud-based registry service where Docker users can store, share
 Docker Hub is a central resource for developers to find and share containerized applications and services.
 On `AWS` we get `ECR`.
 
+# Q. What is a Dockerfile?
+
+A Dockerfile is a text file that contains a series of instructions used to build a Docker image. It defines the environment and steps required to package an application into an image. Key instructions include:
+
+- **FROM**: Specifies the base image to use.
+- **RUN**: Executes commands to install dependencies or set up the environment.
+- **COPY/ADD**: Copies files from the host to the container.
+- **CMD/ENTRYPOINT**: Defines the default command or script to run when the container starts.
+
+By using a Dockerfile, developers can automate the process of creating customized Docker images.
+
+# Q. What is a Hypervisor?
+
+A hypervisor is software or hardware that creates and manages virtual machines (VMs). It allows multiple operating systems to run concurrently on a single physical machine by sharing resources like CPU, memory, and storage.
+
+There are two types of hypervisors:
+
+- **Type 1 (Bare-Metal)**: Runs directly on the hardware. Examples include VMware ESXi, Microsoft Hyper-V, and Xen. It offers better performance since it interacts directly with the physical hardware.
+  
+- **Type 2 (Hosted)**: Runs on top of a host operating system. Examples include VirtualBox and VMware Workstation. It is more flexible but slightly less efficient due to the overhead of the host OS.
+
+Hypervisors enable virtualization, allowing efficient use of hardware by running multiple VMs on a single physical server.
+
 
 
