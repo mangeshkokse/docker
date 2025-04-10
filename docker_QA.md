@@ -137,6 +137,33 @@ There are two types of hypervisors:
 
 Hypervisors enable virtualization, allowing efficient use of hardware by running multiple VMs on a single physical server.
 
+# Q. What is lifecycle of Docker.
+- The lifecycle of Docker represents the process from creating a Dockerfile to building a deployable image.
+
+**Here’s a step-by-step flow of what happens from image creation to container destruction:**
+```mathematica
+Dockerfile → Image → Container → Running → Stopped → Removed
+```
+1. Create Image
+```Dockerfile
+FROM node:18
+COPY . /app
+RUN npm install
+CMD ["npm", "start"]
+```
+2. Build it into an image
+```bash
+docker build -t my-app:latest .
+```
+3. Create Container (but not start)
+```bash
+docker create my-app:latest
+```
+The container is created (has an ID), but it’s not running yet.
+4. Start the Container
+```bash
+docker start <container-id or name>
+```
 
 # Q. Write simple `Nginx` Dockerfile.
 **NGINX Dockerfile Example**
