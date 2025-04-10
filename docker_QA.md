@@ -160,6 +160,7 @@ docker build -t my-app:latest .
 docker create my-app:latest
 ```
 The container is created (has an ID), but it’s not running yet.
+
 4. Start the Container
 ```bash
 docker start <container-id or name>
